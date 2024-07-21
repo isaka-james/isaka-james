@@ -1,0 +1,316 @@
+/* General Window Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #000;
+    color: #0f0;
+    overflow-x: hidden;
+}
+
+.window {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    border: 2px solid #0f0;
+    background-color: #000;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    position: relative;
+    animation:  1s ease-out; /* slide-in */
+}
+
+.title-bar {
+    background-color: #000080;
+    color: #fff;
+    padding: 5px;
+    border-bottom: 2px solid #0f0;
+    font-size: 14px;
+    position: relative;
+}
+
+.title {
+    margin-left: 10px;
+}
+
+.window-controls {
+    float: right;
+    margin-right: 10px;
+}
+
+.control-btn {
+    width: 20px;
+    height: 20px;
+    background-color: #000080;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    font-size: 12px;
+    margin-left: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.control-btn:hover {
+    background-color: #0f0;
+}
+
+/* Menu Bar */
+.menu-bar {
+    background-color: #000080;
+    color: #fff;
+    padding: 5px;
+    border-top: 2px solid #0f0;
+}
+
+.menu-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-bar li {
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+}
+
+.menu-bar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+    display: block;
+}
+
+.menu-bar a:hover {
+    background-color: #0f0;
+    color: #000;
+}
+
+.menu-bar ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000080;
+    border: 1px solid #0f0;
+    padding: 0;
+}
+
+.menu-bar ul li:hover > ul {
+    display: block;
+}
+
+.menu-bar ul ul li {
+    display: block;
+    padding: 5px;
+}
+
+/* File Explorer */
+.file-explorer {
+    margin-top: 20px;
+    background-color: #000080;
+    padding: 10px;
+    border: 2px solid #0f0;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.file-explorer h2 {
+    color: #0f0;
+}
+
+.file-explorer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.file-explorer li {
+    margin: 5px 0;
+}
+
+.file-explorer a {
+    color: #0f0;
+    text-decoration: none;
+}
+
+.file-explorer a:hover {
+    text-decoration: underline;
+}
+
+/* Dialog Box */
+.dialog {
+    display: none;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 300px;
+    border: 2px solid #0f0;
+    background-color: #000;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    padding: 10px;
+    z-index: 10;
+}
+
+.dialog-header {
+    background-color: #000080;
+    color: #fff;
+    padding: 5px;
+    font-size: 14px;
+    border-bottom: 2px solid #0f0;
+}
+
+.dialog-content {
+    padding: 10px;
+    color: #0f0;
+}
+
+.dialog-close {
+    background-color: #000080;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.dialog-close:hover {
+    background-color: #0f0;
+    color: #000;
+}
+
+/* Status Bar */
+.status-bar {
+    background-color: #000080;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+    border-top: 2px solid #0f0;
+    position: relative;
+    bottom: 0;
+   
+}
+
+/* @keyframes slide-in {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+} */
+
+@keyframes blink {
+    50% {
+        color: #ff0;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .title-bar {
+        font-size: 12px;
+    }
+
+    .content {
+        padding: 5px;
+    }
+
+    .file-explorer h2, .menu-bar a {
+        font-size: 12px;
+    }
+
+    .back-button {
+        font-size: 10px;
+        padding: 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-bar {
+        font-size: 10px;
+        padding: 4px;
+    }
+
+    .content {
+        padding: 2px;
+    }
+
+    .menu-bar a {
+        font-size: 10px;
+    }
+
+    .file-explorer h2 {
+        font-size: 12px;
+    }
+}
+
+
+
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loading-spinner {
+    border: 8px solid #000; /* Background color */
+    border-top: 8px solid #0f0; /* Spinner color */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Add an optional background overlay for better visibility */
+#loading-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+
+#content-small {
+    max-height: 425px;
+    overflow-y: auto; /* Enables vertical scrolling */
+    scrollbar-width: thin; /* Use 'auto' or 'thin' */
+    scrollbar-color: #888 #f9f9f9; 
+}
+
+
+/* Style the scrollbar using vendor prefixes */
+#content-small::-webkit-scrollbar {
+    width: 12px; /* Increase scrollbar width */
+  }
+  
+
+  #content-small::-webkit-scrollbar-track {
+    background: #797272; /* Light background for contrast */
+  }
+  
+  /* Style the scrollbar thumb */
+  #content-small::-webkit-scrollbar-thumb {
+    background-color: #000000; /* Darker color for thumb */
+    border-radius: 6px; /* Add rounded corners for a smoother look */
+  }

@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #000;
+    color: #0f0;
+    overflow-x: hidden;
+}
+
+.window {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    border: 2px solid #0f0;
+    background-color: #000;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    position: relative;
+    animation: slide-in 1s ease-out;
+}
+
+.title-bar {
+    background-color: #000080;
+    color: #fff;
+    padding: 5px;
+    border-bottom: 2px solid #0f0;
+    font-size: 14px;
+    position: relative;
+}
+
+.title {
+    margin-left: 10px;
+}
+
+.content {
+    padding: 10px;
+}
+
+h1, h2 {
+    color: #0f0;
+    animation: blink 1s step-start infinite;
+}
+
+a {
+    color: #0f0;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff0;
+    text-decoration: underline;
+}
+
+.back-button {
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #ff0;
+    background-color: #000080;
+    padding: 5px;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid #0f0;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+}
+
+.back-button:hover {
+    background-color: #0f0;
+    color: #000;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    50% {
+        color: #ff0;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .title-bar {
+        font-size: 12px;
+    }
+
+    .content {
+        padding: 5px;
+    }
+
+    h1, h2 {
+        font-size: 1.2em;
+    }
+
+    .back-button {
+        font-size: 10px;
+        padding: 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-bar {
+        font-size: 10px;
+        padding: 4px;
+    }
+
+    .content {
+        padding: 2px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    .back-button {
+        font-size: 8px;
+        padding: 3px;
+    }
+}
