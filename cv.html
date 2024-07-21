@@ -24,6 +24,46 @@
 
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/addons.css">
+    <style>
+                /* General styles for profile header */
+        .profile-header {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap; /* Allows wrapping on smaller screens */
+        }
+
+        .profile-picture {
+            flex: 1;
+            /* margin-left: 50px; */
+            text-align: center; /* Centers the image */
+        }
+
+        .profile-picture img {
+            width: 140px;
+            outline-style: double;
+        }
+
+        .profile-info {
+            flex: 0;
+            min-width: 500px;
+            margin-left: 5%;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .profile-header {
+                flex-direction: column; /* Stack items vertically */
+                align-items: center; /* Center align items */
+                text-align: center; /* Center align text */
+                margin-top: 10px;
+            }
+
+            .profile-info {
+                margin-left: 0; /* Remove left margin on small screens */
+                min-width: auto; /* Remove minimum width constraint */
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -60,19 +100,19 @@
             </ul>
         </div>
         <div class="content" id="content-small">
-            <div class="profile-header" style="display: flex; align-items: center;">
-                <div class="profile-picture" style="flex: 1;margin-left: 50px;">
-                    <img src="images/image.png" width="140" style="outline-style: double;" alt="Profile Picture">
+            <div class="profile-header">
+                <div class="profile-picture">
+                    <img src="images/image.png" alt="Profile Picture">
                 </div>
-                <div class="profile-info" style="flex: 0;min-width: 500px;">
+                <div class="profile-info">
                     <h1>About Me</h1>
                     <h4>Low-level Programmer and Full-stack Developer</h4>
                     <p>Passionate about CyberSecurity, App Development, and AI Research.</p>
-                    <p><strong>Available :</strong> <a href="https://www.google.com/maps/place/Dodoma/data=!4m2!3m1!1s0x184de55feeaa7ec9:0x8040bf1262e19cee?sa=X&ved=1t:242&ictx=111" target="_blank">Dodoma, Tanzania</a> </p>
+                    <p><strong>Available :</strong> <a href="https://www.google.com/maps/place/Dodoma/data=!4m2!3m1!1s0x184de55feeaa7ec9:0x8040bf1262e19cee?sa=X&ved=1t:242&ictx=111" target="_blank">Dodoma, Tanzania</a></p>
                     <p><strong>X :</strong> <a href="https://x.com/isakajamess" target="_blank">masterplan</a></p>
                 </div>
-
             </div>
+
             <div class="profile-content" style="padding-left: 20px;">
                 <h2>Education</h2>
                 <ul>
