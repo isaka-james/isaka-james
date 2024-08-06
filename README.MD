@@ -5,7 +5,6 @@
 - 🌱 I’m currently: *developing [UDOM timetable App](https://github.com/isaka-james/udom-timetable-app) using Flutter.* 
 - ⭐ [Nuru Programming Language](https://github.com/NuruProgramming/Nuru) : *I contribute to this sometimes. Come to show Support!*
 - 🌐 LinkedIn: [isaka-james](https://www.linkedin.com/in/isaka-james)
-- ⚡ Fun Fact:  `I love what I do`.
 
 #### My Favourite Quote:
 > "Try to be Useful." - Elon Musk
